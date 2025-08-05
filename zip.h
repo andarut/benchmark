@@ -5,8 +5,7 @@ class ZIP {
 public:
     ZIP() = default;
 
-    static blob encode(blob input, int level, int method, int windowBits, \
-    int memLevel, int strategy);
+    static blob encode(blob input, int level, int method, int windowBits, int memLevel, int strategy);
     static blob decode(blob decoded);
 
     static blob encodeDefault(blob input) {

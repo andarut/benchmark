@@ -21,7 +21,7 @@ public:
 
     static blob encodeMain(blob input) {
         int n = std::thread::hardware_concurrency();
-        return encode(input, 5, 1 << 24, 3, 0, 2, 32, 1 << 25, n, n/2, n/4); // default params
+        return encode(input, 5, 1 << 24, 3, 0, 2, 32, 1 << 25, n, n/2, n/4); // main params
     }
 
     static blob encodeMax(blob input) {
