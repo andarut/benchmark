@@ -10,6 +10,7 @@
 #include <iostream>
 #include <chrono>
 #include <cstddef>
+#include <functional>
 
 typedef std::vector<unsigned char> blob;
 
