@@ -34,7 +34,7 @@ blob LZMA::encode(blob input, int level, unsigned dictSize, int lc, int lp, int 
 }
 
 blob LZMA::decode(blob encoded) {
-    /* reallocate when SZ_ERROR_OUTPUT_BUF */
+    /* TODO: reallocate when SZ_ERROR_OUTPUT_BUF */
     blob decoded(190 * 1024 * 1024);
     
     size_t decodedSize = decoded.size();

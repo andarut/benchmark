@@ -11,6 +11,7 @@
 #include <chrono>
 #include <cstddef>
 #include <functional>
+#include <thread>
 
 typedef std::vector<unsigned char> blob;
 

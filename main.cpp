@@ -56,6 +56,7 @@ int main() {
 
     /* LZMA2 */
     testCase("LZMA2 DEFAULT", LZMA2::encodeDefault, LZMA2::decode);
+    testCase("LZMA2 MAIN", LZMA2::encodeMain, LZMA2::decode);
     testCase("LZMA2 MAX", LZMA2::encodeMax, LZMA2::decode);
 
     /* ZLIB */
