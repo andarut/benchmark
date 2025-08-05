@@ -11,7 +11,7 @@ class LZMA2 {
 public:
     LZMA2() = default;
 
-    static blob encode(blob input, int level, unsigned dictSize, int lc, int lp, int pb, int fb, int numThreads);
+    static blob encode(blob input, int level, int dictSize, int lc, int lp, int pb, int fb, int numThreads);
     static blob decode(blob encoded);
 
     /* presets */

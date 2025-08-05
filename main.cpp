@@ -51,15 +51,16 @@ int main() {
     // file.write(reinterpret_cast<const char*>(g_input.data()), g_input.size());
 
     /* LZMA */
-    // testCase("LZMA DEFAULT", LZMA::encodeDefault, LZMA::decode);
-    // testCase("LZMA MAX", LZMA::encodeMax, LZMA::decode);
+    testCase("LZMA DEFAULT", LZMA::encodeDefault, LZMA::decode);
+    testCase("LZMA MAX", LZMA::encodeMax, LZMA::decode);
 
     /* LZMA2 */
     testCase("LZMA2 DEFAULT", LZMA2::encodeDefault, LZMA2::decode);
     testCase("LZMA2 MAX", LZMA2::encodeMax, LZMA2::decode);
 
     /* ZLIB */
-    // testCase("ZIP DEFAULT", ZIP::encodeDefault, ZIP::decode);
+    testCase("ZIP DEFAULT", ZIP::encodeDefault, ZIP::decode);
+    testCase("ZIP MAX", ZIP::encodeMax, ZIP::decode);
 
     return 0;
 }

@@ -8,16 +8,16 @@ void MyISzFree(ISzAllocPtr, void* address) {
     MyFree(address);  // call 1-arg SDK version
 }
 
-blob LZMA2::encode(blob input, int level, unsigned dictSize, int lc, int lp, int pb, int fb, int numThreads) {
+blob LZMA2::encode(blob input, int level, int dictSize, int lc, int lp, int pb, int fb, int numThreads) {
     ISzAlloc alloc = { MyISzAlloc, MyISzFree };
 
     CLzma2EncProps props;
     Lzma2EncProps_Init(&props);
 
-    props.blockSize = 1 << 25;
+    props.blockSize = dictSize; /* dictionary is not shared between blocks */
     props.numTotalThreads = numThreads;
-    props.numBlockThreads_Max = 8;
-    props.numBlockThreads_Reduced = 4;
+    props.numBlockThreads_Max = numThreads/2;
+    props.numBlockThreads_Reduced = 2;
 
 
     props.lzmaProps.level = level;

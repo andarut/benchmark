@@ -12,4 +12,8 @@ public:
     static blob encodeDefault(blob input) {
         return encode(input, Z_DEFAULT_COMPRESSION, Z_DEFLATED, 15, 8, Z_DEFAULT_STRATEGY);
     }
+
+    static blob encodeMax(blob input) {
+        return encode(input, Z_BEST_COMPRESSION, Z_DEFLATED, 15, 9, Z_DEFAULT_STRATEGY);
+    }
 };
